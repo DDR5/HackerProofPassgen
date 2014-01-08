@@ -16,22 +16,9 @@ class Passwordgeneration:
                 if ans1 == "y":
                         ans2 = input ("How many capital letters would you like to include? [MAX 8] \n")
                         randomUppercase = ''.join(random.choice(string.ascii_uppercase) for i in range(8))
-                        if ans2 == 1:
-                                doneUpper = randomUppercase[:1]      
-                        elif ans2 == 2:
-                                doneUpper = randomUppercase[:2] 
-                        elif ans2 == 3:
-                                doneUpper = randomUppercase[:3] 
-                        elif ans2 == 4:
-                                doneUpper = randomUppercase[:4]
-                        elif ans2 == 5:
-                                doneUpper = randomUppercase[:5]
-                        elif ans2 == 6:
-                                doneUpper = randomUppercase[:6]
-                        elif ans2 == 7:
-                                doneUpper = randomUppercase[:7]
-                        elif ans2 == 8:
-                                doneUpper = randomUppercase[:8]
+                        if int(ans2) in range(1,8):
+                                doneUpper = randomUppercase[:int(ans2)]
+                        
                         else:
                                 print("Invalid number entry")
                 sym = 0
